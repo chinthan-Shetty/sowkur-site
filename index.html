@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sowkur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      perspective: 1400px;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Premium logo animation */
+    .logo-wrapper {
+      display: inline-block;
+      transform-style: preserve-3d;
+      animation: premiumLoop 6s ease-in-out infinite;
+    }
+
+    .logo {
+      width: 480px;
+      max-width: 90vw;
+      border-radius: 26px;
+      backface-visibility: hidden;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Half-flip + idle tilt */
+    @keyframes premiumLoop {
+      /* idle tilt */
+      0% {
+        transform: rotateY(0deg);
+      }
+      20% {
+        transform: rotateY(12deg);
+      }
+
+      /* halfway flip */
+      35% {
+        transform: rotateY(-45deg);
+      }
+      50% {
+        transform: rotateY(0deg);
+      }
+
+      /* rest */
+      100% {
+        transform: rotateY(0deg);
+      }
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      margin-top: 42px;
+      display: inline-block;
+      padding: 14px 36px;
+      background: #25D366;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 30px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    /* 📱 Mobile-only slower animation */
+    @media (max-width: 768px) {
+      .logo-wrapper {
+        animation-duration: 8s;
+      }
+
+      .logo {
+        width: 340px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="logo-wrapper">
+      <img
+        src="sowkur.jpeg"
+        alt="Sowkur Logo"
+        class="logo"
+      />
+    </div>
+
+    <!-- WhatsApp Channel Button -->
+    <div>
+      <a
+        class="whatsapp-btn"
+        href="https://whatsapp.com/channel/0029Va8aFy7FXUudupBXHU2s"
+        target="_blank">
+        Visit Our WhatsApp Channel
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
